@@ -9,7 +9,7 @@ player.setCurrentTime(localStorage.getItem(currentTimeKey));
 
 player.on('timeupdate', throttle(() => {
     player.getCurrentTime().then((seconds) => {
-        localStorage.setItem(currentKey, seconds);
+        localStorage.setItem(currentTimeKey, seconds);
     });
 }, 1000)
 );
